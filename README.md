@@ -1,7 +1,7 @@
 ## 配置环境
 
 - windows 10 64-bit
-- Intel Core i7-8700K@3.70GHz
+- Intel Core i7-8700K（3.70GHz）
 - 32G RAM
 - Nvidia GeForce RTX 2080
 - Matlab 2017b

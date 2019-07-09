@@ -10,7 +10,7 @@
 | 8    | KCC         | AAAI      | 2018 | ✔    |      | HOG                                               |        |       |       |
 | 9    | VITAL       | CVPR      | 2018 |      | ✔    |                                                   |        |       |       |
 | 10   | ECO-HC      | CVPR      | 2017 | ✔    |      | HOG+CN                                            | ✔      |       |       |
-| 11   | ECO         | CVPR      | 2017 | ✔    | ✔    | HOG+imagenet-vgg-m-2048                           | ✔(     |       |       |
+| 11   | ECO         | CVPR      | 2017 | ✔    | ✔    | HOG+imagenet-vgg-m-2048                           | ✔      |       |       |
 | 12   | BACF        | ICCV      | 2017 | ✔    |      | HOG                                               | ✔      |       |       |
 | 13   | SRDCF       | ICCV      | 2017 | ✔    |      | HOG                                               | ✔      |       |       |
 | 14   | PATV        | ICCV      | 2017 |      | ✔    | HOG                                               |        |       |       |

@@ -68,19 +68,32 @@ Todo：
 
 各跟踪结果位于`./results`里面。
 
+### UAV123_10fps结果图
 
+<center class="half">
+    <img src="./figs/UAV123_10fps/error_OPE.png" width="400"><img src="./figs/UAV123_10fps/overlap_OPE.png" width="400">
+</center>
 
-UAV123_10fps结果图：
+<center class="half">
+    <img src="./figs/UAV123_10fps/FPS_avg_27.png">
+</center>
 
-<figure class="half">
-    <img src="./figs/UAV123_10fps/error_OPE.png">
-    <img src="./figs/UAV123_10fps/overlap_OPE.png">
-</figure>
+### UAVDT结果图
 
+<center class="half">
+    <img src="./figs/UAVDT/error_OPE.png" width="400"><img src="./figs/UAVDT/overlap_OPE.png" width="400">
+</center>
 
+<center class="half">
+    <img src="./figs/UAVDT/FPS_avg_27.png">
+</center>
 
+### DTB70结果图
 
+<center class="half">
+    <img src="./figs/DTB70/error_OPE.png" width="400"><img src="./figs/DTB70/overlap_OPE.png" width="400">
+</center>
 
-
-
-
+<center class="half">
+    <img src="./figs/DTB70/FPS_avg_27.png">
+</center>

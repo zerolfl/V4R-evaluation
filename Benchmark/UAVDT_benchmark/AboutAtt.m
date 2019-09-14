@@ -33,11 +33,11 @@ for typeNum = 1:length(typeOPE)
     OJ(row_count+1,:) = overall.rankingValues(2,:); % 最后一行：总体性能得分
     
 %     attName = {'Background clutter','Camera motion','Object motion','Small object','Illumination variations','Object blur','Scale variations','Long-term tracking','Large occlusion'};
-    attFigName={'Trackers' 'BC' 'CM' 'OM' 'SO' 'IV' 'OB' 'SV' 'LTT' 'LO' 'Overall'}; % 行标
+    attFigName={'Trackers' 'BC' 'CM' 'IV' 'LO' 'LTT' 'OB' 'OM' 'SV' 'SO' 'Overall'}; % 行标
     OJ_1 = OJ'; % 原本 行标为trakers，纵标为各类threshold，所以加了转置
     OJ_1 = [attFigName;OJ_1(1:end,:)];
     
-    saveDir = AboutAttPath; % 保存到24+2这个文件夹下的Mat里
+    saveDir = AboutAttPath;
     
     save([saveDir typeOPE{typeNum} '_att.mat'],'OJ_1');
 

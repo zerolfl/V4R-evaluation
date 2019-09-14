@@ -26,7 +26,7 @@ for idxTrk=1:numTrk
             saveScore = sprintf('%.3f', saveScore);
         case 'threshold'
             perf(idxTrk) = bb(rankIdx);
-            saveScore = mean(bb);
+            saveScore = bb(rankIdx);
             saveScore = sprintf('%.3f', saveScore);
     end
     rankingValues{1,idxTrk} = nameTrkAll{idxTrk}; % »ñµÃ¸ú×ÙÆ÷Ãû³Æ

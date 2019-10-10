@@ -55,7 +55,7 @@
 
 Todo：
 
-- [ ] ~~UAV123_10fps、UAVDT、DTB70、UAV123~~、UAV20L
+- [x] UAV123_10fps、UAVDT、DTB70、UAV123、UAV20L
 - [ ] ASRCF
 - [ ] SiamFC
 - [ ] CFNet_conv2

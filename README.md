@@ -1,14 +1,10 @@
-## 配置环境
+# V4R-benchmark
 
-- windows 10 64-bit
-- Intel Core i7-8700K（3.70GHz）
-- 32G RAM
-- Nvidia GeForce RTX 2080
-- Matlab 2017b
+该repo为重新整理的benchmark，包括：[UAV123](https://ivul.kaust.edu.sa/Pages/Dataset-UAV123.aspx)，[UAVDT](https://sites.google.com/site/daviddo0323/projects/uavdt)，[DTB70](https://github.com/flyers/drone-tracking) 这三个benchmark，并增加部分工具脚本。详细使用在WeChat组群内询问。
 
-## 评估
+## 已评估27跟踪器
 
-在UAV123、UAVDT、DTB70上评估跟踪器（OPE）。
+在UAV123、UAVDT、DTB70上评估跟踪器（**OPE**）。
 
 | 序号 | 跟踪器      | 会议/期刊 | 时间 | CPU  | GPU  | Features/Networks                                 | UAV123_10fps | UAVDT | DTB70 | UAV123 | UAV20L |
 | ---- | ----------- | --------- | ---- | ---- | ---- | ------------------------------------------------- | ------------ | ----- | ----- | ------ | ------ |
@@ -51,23 +47,71 @@
 | 4    | MUSTer      | CVPR      | 2015 | ✔    |      | HOG                                               |              |       |       |        |        |
 | 5    | MEEM        | ECCV      | 2014 | ✔    |      | SVM方法，非CF类                                   |              |       |       |        |        |
 
-目前已有 27 个跟踪器的结果，均为 2014 年以后的。
+目前已有 27 个跟踪器的结果，均为 **2014** 年以后的。
 
-Todo：
+## Results_win10_i7_2080_R2017b
 
-- [x] UAV123_10fps、UAVDT、DTB70、UAV123、UAV20L
-- [ ] ASRCF
-- [ ] SiamFC
-- [ ] CFNet_conv2
-- [ ] ADNet
-- [ ] CFWCR
-- [ ] VITAL
+结果在如下配置环境中得到：
 
-## Results
+- windows 10 64-bit
+- Intel Core i7-8700K（3.70GHz）
+- 32G RAM
+- Nvidia GeForce RTX 2080
+- Matlab 2017b
 
-各跟踪结果位于`./results`里面。
+跟踪结果在云盘中获取：链接：https://pan.baidu.com/s/1AvKSwopOSWUDncS8qOam9Q，提取码：jeub。
 
-### Overall
+#### UAV123总体结果和FPS
+
+<center class="half">
+    <img src="./figs/UAV123/error_OPE.png" width="400"><img src="./figs/UAV123/overlap_OPE.png" width="400">
+</center>
+
+<center class="half">
+    <img src="./figs/UAV123/FPS_avg_27.png">
+</center>
+
+#### UAV20L总体结果和FPS
+
+<center class="half">
+    <img src="./figs/UAV20L/error_OPE.png" width="400"><img src="./figs/UAV20L/overlap_OPE.png" width="400">
+</center>
+
+<center class="half">
+    <img src="./figs/UAV20L/FPS_avg_27.png">
+</center>
+
+#### UAV123_10fps总体结果和FPS
+
+<center class="half">
+    <img src="./figs/UAV123_10fps/error_OPE.png" width="400"><img src="./figs/UAV123_10fps/overlap_OPE.png" width="400">
+</center>
+
+<center class="half">
+    <img src="./figs/UAV123_10fps/FPS_avg_27.png">
+</center>
+
+#### UAVDT总体结果和FPS
+
+<center class="half">
+    <img src="./figs/UAVDT/error_OPE.png" width="400"><img src="./figs/UAVDT/overlap_OPE.png" width="400">
+</center>
+
+<center class="half">
+    <img src="./figs/UAVDT/FPS_avg_27.png">
+</center>
+
+#### DTB70总体结果和FPS
+
+<center class="half">
+    <img src="./figs/DTB70/error_OPE.png" width="400"><img src="./figs/DTB70/overlap_OPE.png" width="400">
+</center>
+
+<center class="half">
+    <img src="./figs/DTB70/FPS_avg_27.png">
+</center>
+
+#### 所有结果汇总表格
 
 |              |       | DCF        | KCF        | DSST   | CoKCF | BACF  | SAMF  | SAMF\_CA | Staple | Staple\_CA | SRDCF | SRDCFdecon | CF2   | MCCT      | MCCT\_H | CCOT      | CSR-DCF | STRCF | DeepSTRCF | ECO       | ECO-HC | TADT      | IBCCF | UDT   | fDSST      | KCC   | UDT+  | MCPF  |
 | ------------ | ----- | ---------- | ---------- | ------ | ----- | ----- | ----- | -------- | ------ | ---------- | ----- | ---------- | ----- | --------- | ------- | --------- | ------- | ----- | --------- | --------- | ------ | --------- | ----- | ----- | ---------- | ----- | ----- | ----- |
@@ -91,53 +135,3 @@ Todo：
 |              | FPS   | **950.81** | **602.09** | 97.36  | 17.82 | 52.04 | 12.70 | 11.50    | 63.77  | 56.21      | 13.01 | 7.07       | 16.23 | 8.39      | 57.41   | 1.01      | 11.73   | 26.88 | 6.09      | 14.33     | 70.82  | 33.54     | 2.46  | 56.63 | **150.92** | 42.95 | 49.55 | 0.59  |
 
 > Avg.是各数据集结果的算术平均，**加粗**表示排名前三的结果。
-
-### UAV123结果图
-
-<center class="half">
-    <img src="./figs/UAV123/error_OPE.png" width="400"><img src="./figs/UAV123/overlap_OPE.png" width="400">
-</center>
-
-<center class="half">
-    <img src="./figs/UAV123/FPS_avg_27.png">
-</center>
-
-### UAV20L结果图
-
-<center class="half">
-    <img src="./figs/UAV20L/error_OPE.png" width="400"><img src="./figs/UAV20L/overlap_OPE.png" width="400">
-</center>
-
-<center class="half">
-    <img src="./figs/UAV20L/FPS_avg_27.png">
-</center>
-
-### UAV123_10fps结果图
-
-<center class="half">
-    <img src="./figs/UAV123_10fps/error_OPE.png" width="400"><img src="./figs/UAV123_10fps/overlap_OPE.png" width="400">
-</center>
-
-<center class="half">
-    <img src="./figs/UAV123_10fps/FPS_avg_27.png">
-</center>
-
-### UAVDT结果图
-
-<center class="half">
-    <img src="./figs/UAVDT/error_OPE.png" width="400"><img src="./figs/UAVDT/overlap_OPE.png" width="400">
-</center>
-
-<center class="half">
-    <img src="./figs/UAVDT/FPS_avg_27.png">
-</center>
-
-### DTB70结果图
-
-<center class="half">
-    <img src="./figs/DTB70/error_OPE.png" width="400"><img src="./figs/DTB70/overlap_OPE.png" width="400">
-</center>
-
-<center class="half">
-    <img src="./figs/DTB70/FPS_avg_27.png">
-</center>

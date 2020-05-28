@@ -43,7 +43,7 @@
 | 31   | DSST        | BMVC      | 2014 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
 | 32   | DCF         | PAMI      | 2014 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
 
-## Results_win10_i7_2080_R2019a
+## Results_OPE_win10_i7_2080_R2019a
 
 结果在如下配置环境中得到：
 
@@ -57,7 +57,7 @@
 
 待更新...
 
-## Results_win10_i7_2080_R2017b
+## Results_OPE_win10_i7_2080_R2017b
 
 结果在如下配置环境中得到：
 

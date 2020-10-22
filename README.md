@@ -4,44 +4,13 @@
 
 详细使用在WeChat组群内询问。
 
-## 评估32跟踪器（Updating）
+## 内容
 
-在UAV123、DTB70、UAVDT、VisDrone2019(除了testset-challenge部分的其他序列)上评估跟踪器（**OPE**模式）。
+在UAV123（UAV123、UAV123@10fps、UAV20L）、DTB70、UAVDT、VisDroneSOT-2019（除了testset-challenge部分的其他序列）上评估跟踪器（**OPE**模式）。
 
-| 序号 | 跟踪器      | 会议/期刊 | 时间 | 是否改出run文件 | CPU  | GPU  | 详细信息                                          | UAV123 | UAV123_10fps | UAV20L | DTB70 | UAVDT | VisDrone2019(除了testset-challenge部分的其他序列) |
-| ---- | ----------- | --------- | ---- | --------------- | ---- | ---- | ------------------------------------------------- | ------ | ------------ | ------ | ----- | ----- | ------------------------------------------------- |
-| 1    | UDT+        | CVPR      | 2019 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 2    | UDT         | CVPR      | 2019 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 3    | TADT        | CVPR      | 2019 | ✔               |      | ✔    | imagenet-vgg-verydeep-16                          |        |              |        |       |       |                                                   |
-| 4    | VITAL       | CVPR      | 2018 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 5    | STRCF       | CVPR      | 2018 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 6    | MCCT-H      | CVPR      | 2018 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 7    | MCCT        | CVPR      | 2018 | ✔               |      | ✔    | imagenet-vgg-verydeep-19                          |        |              |        |       |       |                                                   |
-| 8    | KCC         | AAAI      | 2018 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 9    | DeepSTRCF   | CVPR      | 2018 | ✔               |      | ✔    | HOG+CN+imagenet-vgg-m-2048                        |        |              |        |       |       |                                                   |
-| 10   | Staple_CA   | CVPR      | 2017 | ✔               | ✔    |      | HOG+Color historgram                              |        |              |        |       |       |                                                   |
-| 11   | SRDCF       | ICCV      | 2017 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 12   | SAMF_CA     | CVPR      | 2017 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 13   | MCPF        | CVPR      | 2017 | ✔               |      | ✔    | imagenet-vgg-verydeep-19(Conv3-4+Conv4-4+Conv5-4) |        |              |        |       |       |                                                   |
-| 14   | IBCCF       | ICCVws    | 2017 | ✔               |      | ✔    | imagenet-vgg-verydeep-19                          |        |              |        |       |       |                                                   |
-| 15   | fDSST       | PAMI      | 2017 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 16   | ECO-HC      | CVPR      | 2017 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 17   | ECO         | CVPR      | 2017 | ✔               |      | ✔    | HOG+imagenet-vgg-m-2048                           |        |              |        |       |       |                                                   |
-| 18   | CSR-DCF     | CVPR      | 2017 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 19   | CoKCF       | PR        | 2017 | ✔               |      | ✔    | imagenet-vgg-verydeep-19(Conv4-4+Conv5-4)         |        |              |        |       |       |                                                   |
-| 20   | CFWCR       | ICCVws    | 2017 | ✔               |      | ✔    | imagenet-vgg-m-2048                               |        |              |        |       |       |                                                   |
-| 21   | CFNet_conv2 | CVPR      | 2017 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 22   | BACF        | ICCV      | 2017 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 23   | ADNet       | CVPR      | 2017 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 24   | Staple      | CVPR      | 2016 | ✔               | ✔    |      | HOG+Color historgram                              |        |              |        |       |       |                                                   |
-| 25   | SRDCFdecon  | CVPR      | 2016 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 26   | SiameseFC   | ECCV      | 2016 | ✔               |      | ✔    |                                                   |        |              |        |       |       |                                                   |
-| 27   | C-COT       | ECCV      | 2016 | ✔               | ✔    |      | imagenet-vgg-m-2048                               |        |              |        |       |       |                                                   |
-| 28   | CF2         | ICCV      | 2015 | ✔               |      | ✔    | imagenet-vgg-verydeep-19(Conv3-4+Conv4-4+Conv5-4) |        |              |        |       |       |                                                   |
-| 29   | SAMF        | ECCVws    | 2014 | ✔               | ✔    |      | HOG+CN                                            |        |              |        |       |       |                                                   |
-| 30   | KCF         | PAMI      | 2015 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 31   | DSST        | BMVC      | 2014 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
-| 32   | DCF         | PAMI      | 2014 | ✔               | ✔    |      | HOG                                               |        |              |        |       |       |                                                   |
+- 使用手工特征跟踪器：使用fHOG、CN、Gray等人为设计、不走网络的特征的跟踪器。
+
+- 使用Deep-based跟踪器：使用深度特征的跟踪器、end-to-end的跟踪器
 
 ## Results_OPE_win10_i7_2080_R2019a
 
@@ -51,11 +20,78 @@
 - Intel Core i7-8700K（3.70GHz）
 - 32G RAM
 - Nvidia GeForce RTX 2080
-- Matlab 2019a
+- [![matlab-2019a](https://img.shields.io/badge/matlab-2019a-yellow.svg)](https://www.mathworks.com/products/matlab.html)
 - CUDA10
 - VS2017
 
-待更新...
+跟踪结果可在[百度云盘](https://pan.baidu.com/s/1V91PV60-0WgXFN6MESirQw)中获取，提取码：v4rr。
+
+### 使用手工特征跟踪器（21个）的结果
+
+<details open>   
+    <summary><b>UAV123总体结果和FPS</b></summary> 
+    <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123/error_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123/overlap_OPE.png" width="400"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123/UAV123_avgFPS.png">
+    </div>
+</details>
+
+<details close>   
+    <summary><b>UAV20L总体结果和FPS</b></summary> 
+    <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV20L/error_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV20L/overlap_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV20L/UAV20L_avgFPS.png">
+    </div>
+</details>
+
+<details close>   
+    <summary><b>UAV123_10fps总体结果和FPS</b></summary> 
+    <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123_10fps/error_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123_10fps/overlap_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAV123_10fps/UAV123@10fps_avgFPS.png">
+    </div>
+</details>
+
+<details close>   
+    <summary><b>DTB70总体结果和FPS</b></summary> 
+    <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/DTB70/error_OPE.png" width="400">
+        <img src="./figs_Results_Ofigs_HC_Results_OPE_win10_i7_2080_R2019aPE_win10_i7_2080_R2019a/DTB70/overlap_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/DTB70/DTB70_avgFPS.png">
+    </div>
+</details>
+
+<details close>   
+    <summary><b>UAVDT总体结果和FPS</b></summary> 
+  <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAVDT/error_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAVDT/overlap_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/UAVDT/UAVDT_avgFPS.png">
+    </div>
+</details>
+
+<details close>   
+    <summary><b>VisDrone2019-SOT总体结果和FPS</b></summary> 
+  <div align="center"> 
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/VisDrone2019-SOT/error_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/VisDrone2019-SOT/overlap_OPE.png" width="400">
+        <img src="./figs_HC_Results_OPE_win10_i7_2080_R2019a/VisDrone2019-SOT/VisDrone2019-SOT_avgFPS.png">
+    </div>
+</details>
+
+### Deep-based特征跟踪器（15个）的结果
+
+<details open>   
+    <summary><b>UAVDT总体结果和FPS</b></summary> 
+  <div align="center"> 
+        <img src="./figs_Deep_Results_OPE_win10_i7_2080_R2019a/UAVDT/error_OPE.png" width="400">
+        <img src="./figs_Deep_Results_OPE_win10_i7_2080_R2019a/UAVDT/overlap_OPE.png" width="400">
+        <img src="./figs_Deep_Results_OPE_win10_i7_2080_R2019a/UAVDT/UAVDT_avgFPS.png">
+    </div>
+</details>
 
 ## Results_OPE_win10_i7_2080_R2017b
 
@@ -65,85 +101,58 @@
 - Intel Core i7-8700K（3.70GHz）
 - 32G RAM
 - Nvidia GeForce RTX 2080
-- Matlab 2017b
+- [![matlab-2017b](https://img.shields.io/badge/matlab-2017b-yellow.svg)](https://www.mathworks.com/products/matlab.html)
 
-跟踪结果在[百度云盘](https://pan.baidu.com/s/1AvKSwopOSWUDncS8qOam9Q)中获取，提取码：jeub。
+跟踪结果可在[百度云盘](https://pan.baidu.com/s/1UjQ9zD6wjHkEexDwyg9dvA)中获取，提取码：v4rr。
 
-<details close>   
+### 使用手工特征与Deep-based跟踪器（27个）的结果
+
+<details open>   
     <summary><b>UAV123总体结果和FPS</b></summary> 
     <div align="center"> 
-        <img src="./figs/UAV123/error_OPE.png" width="400">
-        <img src="./figs/UAV123/overlap_OPE.png" width="400"> 
-        <img src="./figs/UAV123/FPS_avg_27.png">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123/error_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123/overlap_OPE.png" width="400"> 
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123/FPS_avg_27.png">
     </div>
 </details>
+
 
 <details close>   
     <summary><b>UAV20L总体结果和FPS</b></summary> 
     <div align="center"> 
-        <img src="./figs/UAV20L/error_OPE.png" width="400">
-        <img src="./figs/UAV20L/overlap_OPE.png" width="400">
-        <img src="./figs/UAV20L/FPS_avg_27.png">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV20L/error_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV20L/overlap_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV20L/FPS_avg_27.png">
     </div>
 </details>
 
 <details close>   
     <summary><b>UAV123_10fps总体结果和FPS</b></summary> 
     <div align="center"> 
-        <img src="./figs/UAV123_10fps/error_OPE.png" width="400">
-        <img src="./figs/UAV123_10fps/overlap_OPE.png" width="400">
-        <img src="./figs/UAV123_10fps/FPS_avg_27.png">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123_10fps/error_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123_10fps/overlap_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAV123_10fps/FPS_avg_27.png">
     </div>
 </details>
 
 <details close>   
     <summary><b>DTB70总体结果和FPS</b></summary> 
     <div align="center"> 
-        <img src="./figs/DTB70/error_OPE.png" width="400">
-        <img src="./figs/DTB70/overlap_OPE.png" width="400">
-        <img src="./figs/DTB70/FPS_avg_27.png">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/DTB70/error_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/DTB70/overlap_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/DTB70/FPS_avg_27.png">
     </div>
 </details>
 
 <details close>   
     <summary><b>UAVDT总体结果和FPS</b></summary> 
   <div align="center"> 
-        <img src="./figs/UAVDT/error_OPE.png" width="400">
-        <img src="./figs/UAVDT/overlap_OPE.png" width="400">
-        <img src="./figs/UAVDT/FPS_avg_27.png">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAVDT/error_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAVDT/overlap_OPE.png" width="400">
+        <img src="./figs_Results_OPE_win10_i7_2080_R2017b/UAVDT/FPS_avg_27.png">
     </div>
 </details>
-结果汇总：
 
-|            | UAV123 |       |       |      | UAV20L |       |       |      | UAV123_10fps |       |       |      | DTB70 |       |       |      | UAVDT |       |        |      | Avg.  |       |       |
-| ---------- | ------ | ----- | ----- | ---- | ------ | ----- | ----- | ---- | ------------ | ----- | ----- | ---- | ----- | ----- | ----- | ---- | ----- | ----- | ------ | ---- | ----- | ----- | ----- |
-|            | Prec.  | Succ. | FPS   |      | Prec.  | Succ. | FPS   |      | Prec.        | Succ. | FPS   |      | Prec. | Succ. | FPS   |      | Prec. | Succ. | FPS    |      | Prec. | Succ. | FPS   |
-| ECO        | 0.752  | 0.528 | 15.4  |      | 0.589  | 0.427 | 15.7  |      | 0.711        | 0.520 | 12.7  |      | 0.722 | 0.502 | 11.6  |      | 0.700 | 0.454 | 16.4   |      | 0.695 | 0.486 | 14.3  |
-| CCOT       | 0.729  | 0.502 | 0.9   |      | 0.561  | 0.395 | 0.8   |      | 0.706        | 0.503 | 1.1   |      | 0.769 | 0.517 | 1.1   |      | 0.656 | 0.406 | 1.1    |      | 0.685 | 0.465 | 1.0   |
-| MCCT       | 0.734  | 0.507 | 8.4   |      | 0.605  | 0.407 | 8.0   |      | 0.684        | 0.492 | 8.4   |      | 0.725 | 0.484 | 8.6   |      | 0.671 | 0.437 | 8.6    |      | 0.684 | 0.465 | 8.4   |
-| TADT       | 0.727  | 0.520 | 33.8  |      | 0.609  | 0.459 | 32.0  |      | 0.687        | 0.508 | 34.0  |      | 0.693 | 0.464 | 35.3  |      | 0.677 | 0.431 | 32.5   |      | 0.679 | 0.476 | 33.5  |
-| DeepSTRCF  | 0.705  | 0.508 | 6.1   |      | 0.588  | 0.443 | 5.4   |      | 0.682        | 0.499 | 6.2   |      | 0.734 | 0.506 | 6.2   |      | 0.667 | 0.437 | 6.6    |      | 0.675 | 0.479 | 6.1   |
-| UDT+       | 0.732  | 0.502 | 53.9  |      | 0.585  | 0.401 | 50.9  |      | 0.675        | 0.478 | 39.1  |      | 0.658 | 0.462 | 43.4  |      | 0.697 | 0.416 | 60.4   |      | 0.669 | 0.452 | 49.6  |
-| MCPF       | 0.718  | 0.473 | 0.6   |      | 0.586  | 0.370 | 0.5   |      | 0.665        | 0.445 | 0.6   |      | 0.664 | 0.433 | 0.6   |      | 0.660 | 0.403 | 0.7    |      | 0.659 | 0.424 | 0.6   |
-| IBCCF      | 0.696  | 0.497 | 2.4   |      | 0.613  | 0.435 | 2.0   |      | 0.651        | 0.481 | 2.4   |      | 0.669 | 0.460 | 2.2   |      | 0.603 | 0.388 | 3.4    |      | 0.646 | 0.452 | 2.5   |
-| ECO-HC     | 0.716  | 0.505 | 73.2  |      | 0.522  | 0.387 | 72.9  |      | 0.634        | 0.462 | 66.6  |      | 0.643 | 0.453 | 62.2  |      | 0.681 | 0.410 | 79.2   |      | 0.639 | 0.443 | 70.8  |
-| STRCF      | 0.681  | 0.481 | 26.7  |      | 0.575  | 0.411 | 22.2  |      | 0.627        | 0.457 | 26.9  |      | 0.649 | 0.437 | 26.3  |      | 0.629 | 0.411 | 32.3   |      | 0.632 | 0.439 | 26.9  |
-| CSR-DCF    | 0.676  | 0.450 | 11.6  |      | 0.515  | 0.360 | 10.7  |      | 0.643        | 0.450 | 11.3  |      | 0.646 | 0.438 | 11.8  |      | 0.674 | 0.389 | 13.2   |      | 0.631 | 0.418 | 11.7  |
-| MCCT_H     | 0.659  | 0.457 | 56.5  |      | 0.568  | 0.378 | 51.4  |      | 0.596        | 0.433 | 57.2  |      | 0.604 | 0.405 | 59.0  |      | 0.667 | 0.402 | 62.9   |      | 0.619 | 0.415 | 57.4  |
-| BACF       | 0.662  | 0.461 | 51.8  |      | 0.584  | 0.415 | 40.2  |      | 0.572        | 0.413 | 52.5  |      | 0.590 | 0.402 | 46.5  |      | 0.686 | 0.433 | 69.1   |      | 0.619 | 0.425 | 52.0  |
-| UDT        | 0.668  | 0.477 | 58.7  |      | 0.514  | 0.363 | 29.6  |      | 0.575        | 0.430 | 61.0  |      | 0.602 | 0.422 | 57.5  |      | 0.674 | 0.441 | 76.4   |      | 0.607 | 0.427 | 56.6  |
-| CoKCF      | 0.652  | 0.399 | 17.7  |      | 0.507  | 0.298 | 16.6  |      | 0.608        | 0.384 | 17.4  |      | 0.599 | 0.378 | 16.1  |      | 0.605 | 0.319 | 21.2   |      | 0.594 | 0.356 | 17.8  |
-| CF2        | 0.655  | 0.441 | 16.3  |      | 0.490  | 0.352 | 14.3  |      | 0.601        | 0.425 | 16.0  |      | 0.616 | 0.415 | 14.4  |      | 0.602 | 0.355 | 20.1   |      | 0.593 | 0.398 | 16.2  |
-| Staple_CA  | 0.672  | 0.454 | 56.4  |      | 0.497  | 0.345 | 48.0  |      | 0.587        | 0.420 | 56.0  |      | 0.504 | 0.351 | 56.5  |      | 0.695 | 0.394 | 64.1   |      | 0.591 | 0.393 | 56.2  |
-| SRDCF      | 0.676  | 0.463 | 13.6  |      | 0.507  | 0.343 | 9.5   |      | 0.575        | 0.423 | 13.9  |      | 0.512 | 0.363 | 10.7  |      | 0.658 | 0.419 | 17.4   |      | 0.586 | 0.402 | 13.0  |
-| SRDCFdecon | 0.631  | 0.447 | 7.3   |      | 0.443  | 0.328 | 5.7   |      | 0.584        | 0.429 | 7.6   |      | 0.504 | 0.351 | 6.0   |      | 0.643 | 0.410 | 8.9    |      | 0.561 | 0.393 | 7.1   |
-| SAMF_CA    | 0.605  | 0.415 | 11.0  |      | 0.537  | 0.352 | 11.5  |      | 0.523        | 0.365 | 11.2  |      | 0.532 | 0.346 | 9.1   |      | 0.564 | 0.304 | 14.7   |      | 0.552 | 0.356 | 11.5  |
-| KCC        | 0.620  | 0.422 | 40.4  |      | 0.483  | 0.324 | 36.0  |      | 0.531        | 0.374 | 40.8  |      | 0.440 | 0.291 | 40.7  |      | 0.649 | 0.389 | 56.9   |      | 0.544 | 0.360 | 43.0  |
-| fDSST      | 0.583  | 0.405 | 152.2 |      | 0.385  | 0.288 | 98.3  |      | 0.516        | 0.379 | 153.7 |      | 0.534 | 0.357 | 132.0 |      | 0.666 | 0.383 | 218.5  |      | 0.537 | 0.362 | 150.9 |
-| DSST       | 0.586  | 0.356 | 98.9  |      | 0.459  | 0.270 | 68.4  |      | 0.448        | 0.286 | 98.5  |      | 0.463 | 0.276 | 72.7  |      | 0.681 | 0.354 | 148.3  |      | 0.527 | 0.308 | 97.4  |
-| SAMF       | 0.593  | 0.395 | 12.2  |      | 0.470  | 0.326 | 13.0  |      | 0.466        | 0.326 | 12.5  |      | 0.519 | 0.340 | 10.0  |      | 0.579 | 0.312 | 15.8   |      | 0.525 | 0.340 | 12.7  |
-| Staple     | 0.595  | 0.409 | 61.9  |      | 0.455  | 0.331 | 60.8  |      | 0.456        | 0.342 | 62.1  |      | 0.365 | 0.265 | 62.5  |      | 0.665 | 0.383 | 71.7   |      | 0.507 | 0.346 | 63.8  |
-| DCF        | 0.526  | 0.332 | 935.4 |      | 0.321  | 0.208 | 721.0 |      | 0.408        | 0.266 | 982.6 |      | 0.467 | 0.280 | 660.7 |      | 0.559 | 0.288 | 1454.4 |      | 0.456 | 0.275 | 950.8 |
-| KCF        | 0.523  | 0.331 | 632.5 |      | 0.311  | 0.196 | 424.8 |      | 0.406        | 0.265 | 618.7 |      | 0.468 | 0.280 | 377.5 |      | 0.571 | 0.290 | 956.9  |      | 0.456 | 0.272 | 602.1 |
+## 相关工作
 
-> Avg.是各数据集结果的算术平均，表格按Avg.Prec.降序排列。
+请参考该项目：[Correlation Filter for UAV-Based Aerial Tracking: A Review and Experimental Evaluation](https://github.com/vision4robotics/DCFTracking4UAV)
